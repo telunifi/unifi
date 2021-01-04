@@ -1,3 +1,3 @@
-module github.com/dim13/unifi
+module github.com/telunifi/unifi
 
 go 1.13
