@@ -7,8 +7,8 @@ type AllUser struct {
 	SiteID     string `json:"site_id"`
 	Oui        string `json:"oui"`
 	IsGuest    bool   `json:"is_guest"`
-	FirstSeen  int    `json:"first_seen"`
-	LastSeen   int    `json:"last_seen"`
+	FirstSeen  int64  `json:"first_seen"`
+	LastSeen   int64  `json:"last_seen"`
 	IsWired    bool   `json:"is_wired"`
 	Hostname   string `json:"hostname,omitempty"`
 	Blocked    bool   `json:"blocked,omitempty"`
