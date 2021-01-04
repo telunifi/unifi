@@ -14,7 +14,7 @@ import (
 	"text/tabwriter"
 	"time"
 
-	"github.com/dim13/unifi"
+	"github.com/telunifi/unifi"
 )
 
 var (

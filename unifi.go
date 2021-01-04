@@ -238,6 +238,19 @@ func (u *Unifi) StaMap(site *Site) (StaMap, error) {
 	return m, nil
 }
 
+// Returns a slice of all users
+func (u *Unifi) AllUsers(site *Site) ([]AllUser, error) {
+	var response struct {
+		Data []AllUser
+		Meta meta
+	}
+	err := u.parse(site, "stat/alluser", nil, &response)
+	for i := range response.Data {
+		response.Data[i].u = u
+	}
+	return response.Data, err
+}
+
 // Returns a slice of known users
 func (u *Unifi) Users(site *Site) ([]User, error) {
 	var response struct {
